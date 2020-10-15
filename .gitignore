@@ -1,2 +1,5 @@
 # RubyMine files
 .idea/
+
+db/dev.sqlite3
+
