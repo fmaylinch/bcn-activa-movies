@@ -1,6 +1,14 @@
 # Movies web - Web example in Ruby
 
-We will use:
+## Installation
+
+- `bundle install`
+- `rake db:migrate`
+- `rake db:seed`
+- `ruby app.rb`
+
+
+## Tools used
 
 - Ruby
 - Sinatra
