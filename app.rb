@@ -12,6 +12,18 @@ get '/' do
   erb :index
 end
 
+post '/' do
+
+  id = params["id"]
+  movie = Movie.find_by(id: id)
+  movie.name = params["name"]
+  movie.director = params["director"]
+  movie.rating = params["rating"].to_i
+  movie.save
+
+  redirect '/'
+end
+
 get '/movies/:id' do
   id = params[:id]
   @movie = Movie.find_by(id: id)

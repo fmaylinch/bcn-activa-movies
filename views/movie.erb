@@ -1,3 +1,22 @@
-<%= @movie.name %>
-<%= @movie.director %>
-<%= @movie.rating %>
+
+<form action="/" method="post">
+  <input name="id" type="hidden" value="<%= @movie.id %>">
+  <div>
+    ID: <%= @movie.id %>
+  </div>
+  <div>
+    Name: <input name="name" type="text" value="<%= @movie.name %>">
+  </div>
+  <div>
+    Director: <input name="director" type="text" value="<%= @movie.director %>">
+  </div>
+  <div>
+    Rating:
+    <select name="rating">
+      <% for i in 0..10 %>
+        <option <%= @movie.rating == i ? 'selected' : '' %> value="<%= i %>"><%= i %></option>
+      <% end %>
+    </select>
+  </div>
+  <button>Save</button>
+</form>
