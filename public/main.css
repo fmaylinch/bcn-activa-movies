@@ -2,3 +2,11 @@ body {
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
 }
+
+nav {
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}

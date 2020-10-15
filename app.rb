@@ -12,6 +12,12 @@ get '/' do
   erb :index
 end
 
+get '/movies/:id' do
+  id = params[:id]
+  @movie = Movie.find_by(id: id)
+  erb :movie
+end
+
 directors_store = DirectorsStore.new
 
 get '/directors' do
